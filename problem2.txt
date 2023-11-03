@@ -1,0 +1,7 @@
+a - Discriminação com base em raça e genero no modelo de previsão do nao pagamento de empréstimos.
+
+b - Invasão de privacidade e identificação de autores anônimos por meio de estilometria precisa.
+
+c - Violação de direitos autorais e invasão de privacidade ao coletar imagens de pessoas famosas sem permissão.
+
+d - Uso apropriado de dados de treinamento e aplicação restrita de um modelo de identificação de espécies de plantas.
