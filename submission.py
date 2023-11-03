@@ -100,7 +100,7 @@ def mutate_sentences(sentence: str) -> List[str]:
     similar_sentences = set()
     for perm in permutations(sentence):
         new_sentence = " ".join(perm) 
-        # Verifique se atende aos critérios de semelhança
+
         if len(perm) == num_words and all(sentence[i] + " " + sentence[i+1] in sentence for i in range(num_words - 1)):
             similar_sentences.add(new_sentence)
 
@@ -124,10 +124,9 @@ def sparse_vector_dot_product(v1: SparseVector, v2: SparseVector) -> float:
     # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
     #raise Exception("Not implemented yet")
     
-     # Inicialize o produto escalar como 0
     dot_product = 0.0
 
-    # Itere pelos elementos compartilhados de v1 e v2
+    
     for key in v1:
         if key in v2:
             dot_product += v1[key] * v2[key]
@@ -161,12 +160,6 @@ def increment_sparse_vector(v1: SparseVector, scale: float, v2: SparseVector,
     for key, value in v2.items():
         v1[key] += scale * value
 
-# Exemplo de uso
-v1 = {'a': 1.0, 'b': 2.0, 'c': 0.0, 'd': 3.0}
-v2 = {'a': 2.0, 'b': 1.0, 'c': 0.0, 'd': 4.0}
-scale = 0.5
-increment_sparse_vector(v1, scale, v2)
-print(v1)
     # END_YOUR_CODE
 
 
@@ -189,7 +182,7 @@ def find_nonsingleton_words(text: str) -> Set[str]:
     for word in words:
         word_count[word] += 1
 
-    # Retorne um conjunto de palavras que ocorrem mais de uma vez
+    # Retorne um conjunto de palavras que repetem mais do q uma vez
     nonsingleton_words = {word for word, count in word_count.items() if count > 1}
 
     return nonsingleton_words
